@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -93,7 +94,7 @@ public class DlgBiodata extends javax.swing.JDialog {
                 + "Height : " + myparent.sliHeight.getValue() + " cm" + "\n"
                 + "Weight : " + myparent.sliWeight.getValue() + " kg" + "\n"
                 + "Address : " + myparent.txaAddress.getText() + "\n"
-                + "Education : "+edu + "\n\n"
+                + "Education : "+Arrays.toString(edu.toArray()).replace("[", "").replace("]", "") + "\n\n"
                 + String.format("Your Body Index Mass (BMI) : %.2f", bmi) + "\n"
                 + "Your Weight is " + category;
 
