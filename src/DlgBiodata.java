@@ -48,7 +48,7 @@ public class DlgBiodata extends javax.swing.JDialog {
             } else if (bmi > 27) {
                 category = "Obesity";
             }
-        } else {
+        } else if (myparent.rdoFemale.isSelected()) {
             gender = myparent.rdoFemale.getText();
             bmi = weight / ((height / 100) * (height / 100));
             if (bmi < 18) {
@@ -60,6 +60,9 @@ public class DlgBiodata extends javax.swing.JDialog {
             } else if (bmi > 27) {
                 category = "Obesity";
             }
+        } else {
+            gender = "";
+            bmi = 0;
         }
         
         if (myparent.chkSD.isSelected()) {
